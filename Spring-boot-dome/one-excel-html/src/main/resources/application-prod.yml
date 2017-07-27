@@ -1,8 +1,0 @@
-server:
-  port: 8888
-
-
-girl:
-  age: 99
-  cupSize: Mmmi
-  content: "cupSize:${cupSize},age:${age}"
