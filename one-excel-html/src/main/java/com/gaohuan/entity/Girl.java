@@ -1,19 +1,28 @@
 package com.gaohuan.entity;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Created by gaohuan on 2017/7/20.
  */
-@Component
-@ConfigurationProperties(prefix = "girl")
+@Entity
 public class Girl {
+    @Id@GeneratedValue
+    private Integer id;
     private String cupSize;
     private Integer age;
     private String content;
     private String name;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     @Override
     public String toString() {
